@@ -1,16 +1,16 @@
 ## Spring Boot Prometheus Grafana
 
-Running Spring Boot App Monitoring suite with Prometheus and Grafana
+Running App Monitoring suite with Prometheus and Grafana
 
 ### Starting
 
 ```shell
-docker-compose up --build
+  docker-compose up --build
 ```
 
 ### Stopping
 ```shell
-docker-compose down
+  docker-compose down
 ```
 
 ### Links
@@ -23,8 +23,6 @@ docker-compose down
 | Spring Boot Actuator | [http://localhost:8080/actuator/metrics](http://localhost:8080/actuator/metrics)
 
 ---
-
-## Spring Boot Config
 
 ### Enable Spring Actuator Metrics
 

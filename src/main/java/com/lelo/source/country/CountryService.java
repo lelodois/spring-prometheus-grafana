@@ -1,10 +1,8 @@
-package com.aayushtuladhar.springbootprometheus.service;
+package com.lelo.source.country;
 
-import com.aayushtuladhar.springbootprometheus.domain.Country;
-import com.aayushtuladhar.springbootprometheus.repository.CountryRepository;
-import io.micrometer.core.instrument.MeterRegistry;
-import java.util.List;
-import org.springframework.stereotype.Service;
+import io.micrometer.core.instrument.*;
+import java.util.*;
+import org.springframework.stereotype.*;
 
 @Service
 public class CountryService {
@@ -17,12 +15,12 @@ public class CountryService {
     this.meterRegistry = meterRegistry;
   }
 
-  public List<Country> getAllCountries() {
+  public List<Country> getAllCountries() throws java.io.IOException {
     meterRegistry.counter("service.getAllCountries").increment();
     return countryRepository.getAll();
   }
 
-  public Country getCountryByCode(String countryCode) {
+  public Country getCountryByCode(String countryCode) throws java.io.IOException {
     return countryRepository.getCountryByCode(countryCode);
   }
 }

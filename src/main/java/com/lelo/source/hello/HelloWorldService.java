@@ -1,7 +1,6 @@
-package com.aayushtuladhar.springbootprometheus.service;
+package com.lelo.source.hello;
 
-import com.aayushtuladhar.springbootprometheus.domain.HelloResult;
-import com.aayushtuladhar.springbootprometheus.repository.TimeRepository;
+import com.lelo.source.time.TimeRepository;
 import org.springframework.stereotype.Service;
 
 @Service
