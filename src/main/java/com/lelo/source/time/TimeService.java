@@ -1,13 +1,11 @@
 package com.lelo.source.time;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-import org.springframework.stereotype.Repository;
+import java.time.*;
+import java.time.format.*;
+import java.util.*;
 
-@Repository
-public class TimeRepository {
+@org.springframework.stereotype.Service
+public class TimeService {
 
   public String getFormattedTime() {
     DateTimeFormatter simpleDateFormat = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm:ss z", Locale.US)

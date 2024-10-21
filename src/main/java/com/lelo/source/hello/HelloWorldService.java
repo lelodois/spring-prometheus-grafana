@@ -1,19 +1,18 @@
 package com.lelo.source.hello;
 
-import com.lelo.source.time.TimeRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class HelloWorldService {
 
-  private final TimeRepository timeRepository;
+  private final com.lelo.source.time.TimeService timeService;
 
-  public HelloWorldService(TimeRepository timeRepository) {
-    this.timeRepository = timeRepository;
+  public HelloWorldService(com.lelo.source.time.TimeService timeService) {
+    this.timeService = timeService;
   }
 
   public HelloResult getInfo() {
-    String date = timeRepository.getFormattedTime();
+    String date = timeService.getFormattedTime();
     return new HelloResult("hello world!", date);
   }
 
